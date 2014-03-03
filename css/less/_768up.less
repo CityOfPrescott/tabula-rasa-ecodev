@@ -67,13 +67,12 @@ body
 html {}
 body {}
 .wrap {
-	.max-width(960px);
+	.max-width(1000px);
 	margin: 0 auto 0;
 }
 .site {
-	.wrap;
 	.margin-top(10px);
-	.padding(10px);
+	padding: 0px;
 	box-shadow: 1px 1px 10px #ccc;
 	overflow: hidden;
 }	
@@ -81,6 +80,8 @@ body {}
 .site-main {
 	clear: both;
 	.wrap;
+	background-color: #fff;
+	.margin-top(-40px);
 	
 	.content-area {
 	
@@ -198,12 +199,13 @@ header#masthead .site-header
 		.site-branding
 			h1.site-title
 			h2.site-description
-		nav#site-navigation .main-navigation	
+		nav#site-navigation .main-navigation
+	.banner
+		.inner-banne		
 -------------------------------------------------------------- */
 .site-header {
 
 	.inner-header {
-		background: url(../images/buffy-banner.png) no-repeat;
 		.wrap;
 	}
 }
@@ -221,6 +223,14 @@ header#masthead .site-header
 }
 .logo {
 	text-align: left;
+}
+.banner {
+	background-color: @sec-color;
+	.inner-banner {
+		.wrap;
+		.height(200px);
+		background: url(../images/homepage-banner.png) no-repeat;
+	}
 }
 
 /** Navigation
