@@ -335,6 +335,7 @@ body {
 	font-family: @sans-serif;
 	text-rendering: optimizeLegibility;
 	color: @black;
+	background-color: @prim-color;
 }
 .site {
 	.padding(0, 24px);
@@ -360,7 +361,6 @@ body {
 }
 .site-footer {
 	clear: both;
-	.margin-top(10px);
 }
 
 /** Links
@@ -648,8 +648,6 @@ header#masthead .site-header
 	.skip-link {}
 } /* end .main-navigation */
 ul.nav-menu {
-	border-top: 2px solid #444;
-	border-bottom: 2px solid #444;
 	display: none;
 	
 	li {
@@ -1418,11 +1416,10 @@ FOOTER STYLES
 	border-top: 1px solid #ededed;
 	clear: both;
 	.font-size(12px);
-	.max-width(960px);
-	.margin-top(24px);
 	margin-left: auto;
 	margin-right: auto;
 	.padding(24px, 0);
+	background-color: @sec-color;
 	
 	#inner-footer {}
 	.entry-meta {

@@ -71,7 +71,6 @@ body {}
 	margin: 0 auto 0;
 }
 .site {
-	.margin-top(10px);
 	padding: 0px;
 	box-shadow: 1px 1px 10px #ccc;
 	overflow: hidden;
@@ -84,6 +83,8 @@ body {}
 	.margin-top(-40px);
 	
 	.content-area {
+		.column(8);
+		.first;
 	
 		.site-content {
 			.margin-top(28px);
@@ -91,6 +92,8 @@ body {}
 	}
 	
 	.widget-area {
+		.column(4);
+		.last;
 		border-left: 1px solid #EDEDED;
 		
 		.aside1 {}
@@ -102,7 +105,7 @@ body {}
 /** Layout Selection
 -------------------------------------------------------------- */ 
 // chooose a layout
-.content-sidebar(4); //enter value of sidebar
+//.content-sidebar(4); //enter value of sidebar
 //.content-sidebar-sidebar(3, 4, 5); //enter value of content then sidebar(s) combined	
 //.sidebar-content(4); //enter value of sidebar
 //.sidebar-sidebar-content(3, 3, 6); //enter value of sidebar(s) combined then content
@@ -207,17 +210,22 @@ header#masthead .site-header
 
 	.inner-header {
 		.wrap;
+		overflow: hidden;
 	}
 }
 .site-branding {
 	.height(145px);
+	.column(4);
+	.first;
 	
 	a { 
 		&:hover { color: @white; }
 	}
-	.site-title {}
+	.site-title a { 
+		color: @black;
+	}
 	.site-description {
-		color: @white;
+		color: @tert-color;
 	}
 	.header-image {}
 }
@@ -226,11 +234,16 @@ header#masthead .site-header
 }
 .banner {
 	background-color: @sec-color;
+	
 	.inner-banner {
 		.wrap;
-		.height(200px);
-		background: url(../images/homepage-banner.png) no-repeat;
+		.height(50px);
 	}
+}
+
+.home .inner-banner {
+	.height(200px);
+	background: url(../images/homepage-banner.png) no-repeat;
 }
 
 /** Navigation
@@ -251,32 +264,42 @@ header#masthead .site-header
 	display: none;
 }
 .main-navigation {
+	.column(8);
+	.last;
+	
 	.screen-reader-text {}
 	.skip-link {}
 } /* end .main-navigation */
 ul.nav-menu {
 	display: inline-block !important;
-	text-align: left;
+	text-align: right;
 	width: 100%;		
 	margin: 0;
 	text-indent: 0;
 	
 	li {
 		margin: 0;
-		.margin-right(40px);
+		.margin-left(10px);
+		.margin-top(30px);
 		position: relative;
 		display: inline-block;
 		text-decoration: none;
+		background-color: @sec-color;
+		.padding(10px);
 		
+		&:hover {
+			background-color: @sec-color + 111;
+		}
 		a {
 			border-bottom: 0;
-			color: @grey;
+			color: @white;
 			text-transform: uppercase;
 			white-space: nowrap;
 			display: inline-block;
-			text-decoration: none;	
+			text-decoration: none;
 			
-			&:hover, &:focus { color: @black; }					
+			
+			&:hover, &:focus {}					
 		}
 		&:first-child {}
 		&:last-child {}

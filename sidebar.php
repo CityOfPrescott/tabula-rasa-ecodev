@@ -22,12 +22,12 @@
 				</ul>
 			</aside>
 			-->
-		</div><!-- #secondary -->
+			<div class="widget-area aside2" role="complementary">
+			<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+			<div class="first front-widgets">
+				<?php dynamic_sidebar( 'sidebar-2' ); ?>
+			</div><!-- .first -->
+			<?php endif; ?>	
+			</div>				
+		</div><!-- #secondary -->			
 	<?php endif; ?>
-	<div class="widget-area aside2" role="complementary">
-	<?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
-	<div class="first front-widgets">
-		<?php dynamic_sidebar( 'sidebar-2' ); ?>
-	</div><!-- .first -->
-	<?php endif; ?>	
-	</div>		
