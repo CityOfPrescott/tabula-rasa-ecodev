@@ -81,6 +81,9 @@ body {}
 	.wrap;
 	background-color: #fff;
 	.margin-top(-40px);
+	.border-radius(3px 3px 0 0);
+	box-shadow: 0px 0px 10px #000;
+	.min-height(600px);
 	
 	.content-area {
 		.column(8);
@@ -214,17 +217,23 @@ header#masthead .site-header
 	}
 }
 .site-branding {
-	.height(145px);
-	.column(4);
+	.height(100px);
+	.column(5);
 	.first;
 	
 	a { 
 		&:hover { color: @white; }
 	}
-	.site-title a { 
-		color: @black;
+	.site-title {
+		margin-bottom: 0;
+		.margin-top(20px);
+		
+		a { 
+			color: @black;
+		}
 	}
 	.site-description {
+		margin: 0;
 		color: @tert-color;
 	}
 	.header-image {}
@@ -234,16 +243,12 @@ header#masthead .site-header
 }
 .banner {
 	background-color: @sec-color;
+	border-bottom: 2px solid @white;
 	
 	.inner-banner {
 		.wrap;
 		.height(50px);
 	}
-}
-
-.home .inner-banner {
-	.height(200px);
-	background: url(../images/homepage-banner.png) no-repeat;
 }
 
 /** Navigation
@@ -264,13 +269,9 @@ header#masthead .site-header
 	display: none;
 }
 .main-navigation {
-	.column(8);
+	.column(7);
 	.last;
-	
-	.screen-reader-text {}
-	.skip-link {}
-} /* end .main-navigation */
-ul.nav-menu {
+.nav-menu {
 	display: inline-block !important;
 	text-align: right;
 	width: 100%;		
@@ -286,6 +287,7 @@ ul.nav-menu {
 		text-decoration: none;
 		background-color: @sec-color;
 		.padding(10px);
+		.border-radius(2px);
 		
 		&:hover {
 			background-color: @sec-color + 111;
@@ -303,8 +305,8 @@ ul.nav-menu {
 		}
 		&:first-child {}
 		&:last-child {}
-		ul.sub-menu,
-		ul.children {
+		.sub-menu,
+		.children {
 			display: none;
 			
 			li {
@@ -342,7 +344,11 @@ ul.nav-menu {
 	li.current_page_ancestor {
 		a {}
 	}  /* end current highlighters */			
-} /* end .nav-menu ul */
+} /* end .nav-menu ul */	
+	.screen-reader-text {}
+	.skip-link {}
+} /* end .main-navigation */
+
 
 /******************************************************************
 POSTS & CONTENT STYLES
@@ -458,67 +464,25 @@ article.attachment {
 .next-image {}
 #comment-nav-above {}
 
-/******************************************************************
-POST FORMATS
-******************************************************************/
-
-/** Aside
--------------------------------------------------------------- */
-.format-aside {
-	.entry-content {}
-}
-
-/** Image
--------------------------------------------------------------- */
-.format-image footer h1 {}
-.format-image footer h2 {}
-.format-image footer a h2 {}
-
-/** Gallery
--------------------------------------------------------------- */
-.format-gallery {
-	.entry-content {
-		dl.gallery-item {}
-		.gallery-item a {}
-		.gallery-item a {}
-		.gallery-icon img {}
-	}
-}
-
-/** Link
--------------------------------------------------------------- */
-.format-link {
-	header {}
-	.entry-content {
-		a {}
-	}
-}
-
-/** Quote
--------------------------------------------------------------- */
-.format-quote {
-	.entry-content {
-		p {}
-		blockquote {}
-	}	
-}
-
-/** Status
--------------------------------------------------------------- */
-.format-status {
-	.entry-header {
-		header {
-			h1 {}
-			h2 {}
-			a {}
-			img {}
-		}
-	}
-}
 
 /******************************************************************
 STANDARD PAGES
 ******************************************************************/
+
+/** Home Page
+-------------------------------------------------------------- */
+.home {
+	.inner-banner {
+		.height(200px);
+		background: url(../images/homepage-banner.png) no-repeat;
+	}
+	.content-area {
+		.column(12);
+		.padding(0, 100px);
+	}
+}
+
+
 
 /** Archives
 -------------------------------------------------------------- */
@@ -526,21 +490,6 @@ STANDARD PAGES
 	.archive-header {}
 	.archive-meta {}
 }
-
-/** Front Page
--------------------------------------------------------------- */
-.template-front-page {
-	.home_top {
-		.locations {}
-		.featured {}
-	}
-	.spotlights {
-		.spotlight {}
-	}
-}
-
-/** Home 
--------------------------------------------------------------- */
 
 /** Search Results
 -------------------------------------------------------------- */
@@ -763,18 +712,116 @@ can be found in the bones theme */
 FOOTER STYLES
 ******************************************************************/
 .site-footer {
-	#inner-footer {}
-	.entry-meta {}
-	a {
-		&:hover { color: @link-hover; }
+	.footer_inner {	
+			.wrap;
+			.margin-top(10px);
+			.margin-bottom(10px);
+			overflow: hidden;
 	}
-	ul {
+	.nav-menu{
+		.column(8);
+		.first;
+		text-align: center;
+		margin-left: 0;
+		padding-left: 0;
+
 		li {
-			a {}
-			&:first-child {}
-			&:last-child {}
+			margin: 0;
+			.column(3);
+			
+			a {
+				color: @white;
+				text-transform: uppercase;
+				text-decoration: none;
+				.font-size(14px);
+				font-weight: bold;
+			}
+			&:first-child {
+				.first;
+			}
+			&:last-child {
+				.last;
+			}
+			.sub-menu,
+			.children {
+				display: block;
+				.padding-left(10px);
+				
+				li {
+					width: 100%;
+					display: block;
+					text-align: left;
+					
+					a { 
+						text-align: left;
+						text-transform: capitalize;
+						font-weight: normal;
+					}
+				}
+			}	
+		}		
+	}
+	.contact-info {
+		.column(4);
+		.last;
+		color: @white;
+		border-left: 1px solid @white;
+		.padding-left(10px);
+		.min-height(125px);
+		
+		h3 {
+			font-weight: bold;
 		}
 	}
+	.entry-meta {}
+	.cop_footer {
+		clear: both;
+		background: #ddd;
+		overflow: hidden;
+			
+		.footer_inner {	
+			.wrap;
+			.margin-top(10px);
+			.margin-bottom(5px);
+			overflow: hidden;
+			
+		}
+		.logo {
+			float: left;
+			margin: 0;
+			padding: 0;
+		}
+		.cop_menu {
+			display: inline;
+			float: left;
+			.margin-top(20px);
+			
+			ul {
+				margin: 0;
+				padding: 0;
+				
+				li { 
+					list-style: none;
+					float: left;
+					.padding-left(15px);
+					margin: 0;
+					
+					a {
+						.font-size(16px);
+						font-family: 'Playfair Display SC', serif;
+						color: #C44;
+						.padding-top(20px);
+						text-shadow: 2px 2px 3px #EEE;
+						text-decoration: none;
+						font-weight: bold
+						
+						
+					}
+				}
+			}
+		}
+		
+	}	
 }
 .copyright {}
 

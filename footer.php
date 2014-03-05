@@ -12,10 +12,31 @@
 ?>
 	</div><!-- #main -->
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<?php do_action( 'tr_credits' ); ?>
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'tabula-rasa' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'tabula-rasa' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'tabula-rasa' ), 'WordPress' ); ?></a>
-		</div><!-- .site-info -->
+		<div class="footer_inner">
+				<?php tr_main_nav(); ?>
+				<div class="contact-info">
+					<h3>Department of Economic Initiatives</h3>
+					<p>928-777-1204</p>
+				</div>
+		</div><!-- .footer_inner -->
+
+		<div class="cop_footer">
+			<div class="footer_inner">
+				<p class="logo"><a href="http://www.cityofprescott.net/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo_40.png" alt="Prescott Municipal Airport" /></a></p>
+				<div class="cop_menu">
+					<ul>
+						<li><a href="http://www.cityofprescott.net/visitors/">Visitors</a></li>
+						<li><a href="http://www.cityofprescott.net/services/">City Services</a></li>
+						<li><a href="http://www.cityofprescott.net/history/">History</a></li>
+						<li><a href="http://www.cityofprescott.net/business/">Business</a></li>
+						<li><a href="http://www.cityofprescott.net/leadership/">City Leadership</a></li>
+						<li><a href="http://www.cityofprescott.net/documents/">Documents</a></li>
+						<li><a href="http://www.cityofprescott.net/contact/">Contact Us</a></li>
+					</ul>
+				</div><!-- .site-info -->
+			</div>	
+		</div>
+		
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

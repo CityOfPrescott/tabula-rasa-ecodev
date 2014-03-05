@@ -346,6 +346,7 @@ body {
 }
 .site-main {
 	overflow: hidden;
+	.padding(10px);
 	
 	.content-area {
 	
@@ -385,7 +386,7 @@ a, a:visited {
 /** H1, H2, H3, H4, H5, H6 Styles 
 -------------------------------------------------------------- */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-	.margin(24px, 0);
+	margin: 0;
 	font-family: @sans-serif;
 	text-rendering: optimizelegibility;
 	font-weight: 400;
@@ -646,8 +647,8 @@ header#masthead .site-header
 	
 	.screen-reader-text {}
 	.skip-link {}
-} /* end .main-navigation */
-ul.nav-menu {
+
+.nav-menu {
 	display: none;
 	
 	li {
@@ -674,8 +675,8 @@ ul.nav-menu {
 		depend on the project. Here's some great info on it:
 		http://www.alistapart.com/articles/organizing-mobile/
 		*/
-		ul.sub-menu,
-		ul.children {
+		.sub-menu,
+		.children {
 			li {
 				a {
 					.padding-left(30px);
@@ -695,6 +696,8 @@ ul.nav-menu {
 		a {}
 	}  /* end current highlighters */			
 } /* end .nav-menu ul */
+	
+} /* end .main-navigation */
 
 /******************************************************************
 POSTS & CONTENT STYLES
@@ -1418,21 +1421,14 @@ FOOTER STYLES
 	.font-size(12px);
 	margin-left: auto;
 	margin-right: auto;
-	.padding(24px, 0);
 	background-color: @sec-color;
 	
-	#inner-footer {}
+	.footer_inner {}
 	.entry-meta {
 		.margin-top(24px);
 		.font-size(13px);
 		color: @black;
 	}
-	a { 
-		text-decoration: none;
-		text-align: right;
-		display: block;
-		color: @link-color;
-	}	
 	ul {
 		li {
 			a {}
@@ -1440,6 +1436,27 @@ FOOTER STYLES
 			&:last-child {}
 		}
 	}
+	.cop_footer {
+		clear: both;
+		background: #ddd;
+		overflow: hidden;
+		
+		.footer_inner {
+		}
+		
+		.logo {
+			margin: 0;
+			padding: 0;
+			
+			a {
+				text-align: center;
+			}
+		}
+		.cop_menu {
+			display: none;
+		}
+		
+	}		
 }
 .copyright {}
 

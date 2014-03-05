@@ -153,7 +153,7 @@ THEME SUPPORT
 /** Google Fonts
 **************************************************************/
 function tr_theme_specific_scripts_and_styles() {
-wp_register_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300|Open+Sans+Condensed:700|Old+Standard+TT:400,700');
+wp_register_style( 'google-fonts', 'http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300|Open+Sans+Condensed:700|Old+Standard+TT:400,700|Playfair+Display+SC');
 wp_enqueue_style( 'google-fonts' );
 }
 add_action('wp_enqueue_scripts', 'tr_theme_specific_scripts_and_styles', 999);
