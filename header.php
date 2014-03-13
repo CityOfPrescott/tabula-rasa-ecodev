@@ -64,6 +64,9 @@
 		</div>
 		<div class="banner">
 			<div class="inner-banner">
+				<?php if ( !is_front_page() ) { ?>
+				<h2><?php echo get_the_title(); ?></h2>
+				<?php } ?>
 			</div>
 		</div>
 	</header><!-- #masthead -->

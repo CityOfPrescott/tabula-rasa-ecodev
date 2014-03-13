@@ -335,7 +335,8 @@ body {
 	font-family: @sans-serif;
 	text-rendering: optimizeLegibility;
 	color: @black;
-	background-color: @prim-color;
+	//background-color: @prim-color;
+	background-color: #859FCE;
 }
 .site {
 	.padding(0, 24px);
@@ -344,12 +345,8 @@ body {
 .site-header { 
 	.padding-bottom(24px);
 }
-.site-main {
-	overflow: hidden;
-	.padding(10px);
-	
-	.content-area {
-	
+.site-main {	
+	.content-area {	
 		.site-content {
 			word-wrap: break-word;
 		}
@@ -616,7 +613,8 @@ header#masthead .site-header
 	.site-description {
 		font-weight: normal;
 		.font-size(13px);
-		color: @white;			
+		color: @white;
+		display: none;
 	}
 	.header-image {
 		.margin-top(24px);
