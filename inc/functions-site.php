@@ -190,4 +190,22 @@ function google_analytics_tracking_code(){ ?>
 	</script>
 <?php }	
 add_action('wp_head', 'google_analytics_tracking_code');
+
+/* Add random background classes
+******************************************************/
+function my_class_names($classes) {
+
+	$backgrounds = array (0,1,2,3,4,5,6,7,8,9);
+	shuffle ( $backgrounds );
+	$bg_num = $backgrounds[0];
+	$background = 'bg_' . $bg_num;
+
+	// add 'class-name' to the $classes array
+	$classes[] = $background;
+	// return the $classes array
+	return $classes;
+}
+ 
+//Now add test class to the filter
+add_filter('body_class','my_class_names');
 ?>
