@@ -84,7 +84,7 @@ p {
 /*  This is in the wrong spsce */
 .main-navigation ul.nav-menu,
 .main-navigation div.nav-menu > ul {
-	display: none;
+	//display: none;
 }
 .main-navigation ul.nav-menu.toggled-on,
 .menu-toggle {
@@ -336,23 +336,25 @@ body {
 	text-rendering: optimizeLegibility;
 	color: @black;
 	//background-color: @prim-color;
-	background-color: #859FCE;
+	//background-color: #859FCE;
+	background-color: #EEE;
+	
 }
 .site {
-	.padding(0, 24px);
-
 }
 .site-header { 
-	.padding-bottom(24px);
 }
 .site-main {	
 	.content-area {	
+		.padding(0, 10px);
+		
 		.site-content {
 			word-wrap: break-word;
 		}
 	}
 	
 	.widget-area {
+		
 		.aside1 {}
 		.aside2 {}
 	}
@@ -595,11 +597,19 @@ header#masthead .site-header
 	.inner-header {
 		background: url(../images/buffy-banner-350.png) no-repeat;
 		height: 100%;
+		background-color: @white;
 	}
 }
 .site-branding {
 	text-align: left;
 	.padding-left(10px);
+
+	.mobile-menu {
+		position: absolute;
+		.top(5px);
+		.left(10px);
+		color: @white;
+	}
 	
 	a {
 		color: @white;
@@ -607,8 +617,15 @@ header#masthead .site-header
 		text-decoration: none;
 	}
 	.site-title {
-		.font-size(24px);
-		.margin-bottom(14px);
+		.font-size(20px);
+		//.font-size(24px);
+		//.margin-bottom(14px);
+		.padding-left(30px);
+		
+		a {
+			color: @sec-color;
+			text-shadow: none;
+		}
 	}
 	.site-description {
 		font-weight: normal;
@@ -622,7 +639,14 @@ header#masthead .site-header
 }	
 .logo {}
 .banner {
-	.inner-banner {}
+	.inner-banner {
+		background-color: @sec-color;	
+		h2 {
+			color: @white;
+			text-shadow: none;
+			text-align: center;
+		}
+	}
 }
 
 /** Navigation
@@ -647,7 +671,7 @@ header#masthead .site-header
 	.skip-link {}
 
 .nav-menu {
-	display: none;
+	//display: none;
 	
 	li {
 		.margin-top(24px);
@@ -656,7 +680,7 @@ header#masthead .site-header
 		text-align: left;
 		
 		a {
-			color: @black;
+			color: @white;
 			/*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -697,6 +721,17 @@ header#masthead .site-header
 	
 } /* end .main-navigation */
 
+.mm-menu {
+	margin: 0;
+	
+	li {
+		text-align: left;
+		color: @white;
+	}
+}
+.mm-ismenu {
+	background: @sec-color!important;
+}
 /******************************************************************
 POSTS & CONTENT STYLES
 ******************************************************************/
@@ -1038,8 +1073,21 @@ STANDARD PAGES
 -------------------------------------------------------------- */
 .template-front-page {}
 
+
 /** Home 
--------------------------------------------------------------- */
+---------------------------------------------------------------- */
+.home { 
+	.entry-title {
+		background-color: @sec-color;
+		.margin(0, -10px);
+		text-align: center;
+		text-shadow: none;
+		
+		a {
+			color: @white;
+		}
+	}
+}
 
 /** Search Results
 -------------------------------------------------------------- */
@@ -1421,17 +1469,34 @@ FOOTER STYLES
 	margin-right: auto;
 	background-color: @sec-color;
 	
-	.footer_inner {}
-	.entry-meta {
-		.margin-top(24px);
-		.font-size(13px);
-		color: @black;
-	}
-	ul {
-		li {
-			a {}
-			&:first-child {}
-			&:last-child {}
+	.footer_inner {
+		
+		.entry-meta {
+			.margin-top(24px);
+			.font-size(13px);
+			color: @black;
+		}
+		.nav-menu {
+			display: none;
+			li {
+				a {}
+				&:first-child {}
+				&:last-child {}
+			}
+		}
+		.contact-info { 
+			h3 {
+				display: none;
+			}
+			p {
+				font-weight: bold;
+				color: @white;
+				font-family: @sans-serif;
+				text-align: center;
+				.font-size(18px);
+				margin: 0;
+				.padding(5px);
+			}	
 		}
 	}
 	.cop_footer {
@@ -1445,6 +1510,7 @@ FOOTER STYLES
 		.logo {
 			margin: 0;
 			padding: 0;
+			text-align: center;
 			
 			a {
 				text-align: center;

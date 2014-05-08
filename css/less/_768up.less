@@ -151,7 +151,9 @@ body {
 		.aside2 {}
 	}
 }
-.site-footer {}
+.site-footer {
+	display: block;
+}
 
 /** Layout Selection
 -------------------------------------------------------------- */ 
@@ -258,6 +260,7 @@ header#masthead .site-header
 		.inner-banner		
 -------------------------------------------------------------- */
 .site-header {
+	.padding-bottom(24px);
 
 	.inner-header {
 		.wrap;
@@ -273,9 +276,14 @@ header#masthead .site-header
 	a { 
 		&:hover { color: @white; }
 	}
+	.mobile-menu {
+		display: none;
+	}	
 	.site-title {
 		margin-bottom: 0;
 		.margin-top(20px);
+		.font-size(28px);
+		padding-left: 0;
 		
 		a { 
 			color: @black;
@@ -300,12 +308,14 @@ header#masthead .site-header
 	.inner-banner {
 		.wrap;
 		.height(50px);
+		background-color: transparent;
 		
 		h2 {
 			color: @white;
 			text-shadow: 2px 2px 2px #000;
 			.font-size(26px);
 			.padding(5px, 10px);
+			text-align: left;
 		}
 	}
 }
@@ -778,67 +788,72 @@ FOOTER STYLES
 	background-image: url('../images/patterns/noise_lines_trans.png');
 	
 	.footer_inner {	
-			.wrap;
-			.margin-top(10px);
-			.margin-bottom(10px);
-			overflow: hidden;
-	}
-	.nav-menu{
-		.column(8);
-		.first;
-		text-align: center;
-		margin-left: 0;
-		padding-left: 0;
-
-		li {
-			margin: 0;
-			.column(3);
+		.wrap;
+		.margin-top(10px);
+		.margin-bottom(10px);
+		overflow: hidden;
 			
-			a {
-				color: @white;
-				text-transform: uppercase;
-				text-decoration: none;
-				.font-size(14px);
+		.nav-menu {
+			.column(8);
+			.first;
+			text-align: center;
+			margin-left: 0;
+			padding-left: 0;
+
+			li {
+				margin: 0;
+				.column(3);
+				
+				a {
+					color: @white;
+					text-transform: uppercase;
+					text-decoration: none;
+					.font-size(14px);
+					font-weight: bold;
+				}
+				&:first-child {
+					.first;
+				}
+				&:last-child {
+					.last;
+				}
+				.sub-menu,
+				.children {
+					display: block;
+					.padding-left(10px);
+					
+					li {
+						width: 100%;
+						display: block;
+						text-align: left;
+						
+						a { 
+							text-align: left;
+							text-transform: capitalize;
+							font-weight: normal;
+						}
+					}
+				}	
+			}		
+		}
+		.contact-info {
+			.column(4);
+			.last;
+			color: @white;
+			border-left: 1px solid @white;
+			.padding-left(10px);
+			.min-height(125px);
+			
+			h3 {
+				display: block;
 				font-weight: bold;
 			}
-			&:first-child {
-				.first;
+			p {
+				text-align: left;
 			}
-			&:last-child {
-				.last;
-			}
-			.sub-menu,
-			.children {
-				display: block;
-				.padding-left(10px);
-				
-				li {
-					width: 100%;
-					display: block;
-					text-align: left;
-					
-					a { 
-						text-align: left;
-						text-transform: capitalize;
-						font-weight: normal;
-					}
-				}
-			}	
-		}		
-	}
-	.contact-info {
-		.column(4);
-		.last;
-		color: @white;
-		border-left: 1px solid @white;
-		.padding-left(10px);
-		.min-height(125px);
-		
-		h3 {
-			font-weight: bold;
 		}
+		.entry-meta {}
 	}
-	.entry-meta {}
 	.cop_footer {
 		clear: both;
 		background: #ddd;

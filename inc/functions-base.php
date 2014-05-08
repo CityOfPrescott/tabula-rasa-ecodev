@@ -138,10 +138,18 @@ function tr_scripts_and_styles() {
     wp_enqueue_style('tabula_rasa-ie-only');
 
     $wp_styles->add_data( 'tabula_rasa-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+		
+	//mobile menu - mmenu
+	
+	 wp_register_script( 'mmenu-js', get_stylesheet_directory_uri() . '/js/jquery.mmenu.js', array( 'jquery' ), '', true );
+    wp_register_style( 'mmenu-css', get_stylesheet_directory_uri() . '/css/jquery.mmenu.css', array(), '', 'all' );
+
 
     // I recommend using a plugin to call jQuery using the google cdn. That way it stays cached and your site will load faster.
     wp_enqueue_script( 'jquery' );
     wp_enqueue_script( 'tabula_rasa-js' );
+		wp_enqueue_script( 'mmenu-js' );		
+    wp_enqueue_style( 'mmenu-css' );		
   }
 }
 
