@@ -49,6 +49,9 @@ TABLE OF CONTENTS
 // import mixins
 @import "_mixins.less";
 
+	// import grid and layouts
+	@import "_grid.less";
+
 /*
 BASE (MOBILE) SIZE
 This are the mobile styles. It's what people see on their phones. If
@@ -72,6 +75,17 @@ tweeners.
 
 } // end of media query
 
+@media only screen and (min-width: 600px) {
+	@import "_mixins.less";
+	
+	// import grid and layouts
+	@import "_grid.less";
+
+	// styles in 768up.less
+	@import "_600up.less";
+
+} // end of media query
+
 /*
 TABLET & SMALLER LAPTOPS
 This is the average viewing window. So Desktops, Laptops, and
@@ -83,10 +97,54 @@ you can add resource intensive styles.
 	// import grid and layouts
 	@import "_grid.less";
 
+	// import mixins
+	@import "_mixins.less";
+	
 	// styles in 768up.less
 	@import "_768up.less";
 
 } // end of media query
+
+@media only screen and (min-width: 800px) {
+	.main-navigation .nav-menu li { .font-size(11px); }
+}
+@media only screen and (min-width: 850px) {
+	.site-branding .site-title { .font-size(21px); }
+	.main-navigation .nav-menu li { .font-size(12px); }
+	
+	.site-footer .footer_inner .nav-menu { .column(8); .first; }
+	.site-footer .footer_inner .contact-info { .column(4); .last; 
+		clear: none;
+		text-align: left;
+		border: none;
+		border-left: 1px solid @white;
+		padding: 0;
+		.padding-left(10px);
+		.min-height(125px);	
+			h3 {
+				display: block;
+				font-weight: bold;
+			}
+			p {
+				display: block;
+				text-align: left;
+			}		
+	}	
+	.site-footer .cop_footer .cop_menu ul li:nth-of-type(7) { display: inline;} //contact us 
+}
+@media only screen and (min-width: 900px) {
+	.site-branding .site-title { .font-size(22px); }
+	.main-navigation .nav-menu li { .font-size(13px); }
+}
+@media only screen and (min-width: 950px) {
+	.site-branding .site-title { .font-size(23px); }
+	.main-navigation .nav-menu li { .font-size(14px); }
+}
+@media only screen and (min-width: 1000px) {
+	.site-branding .site-title { .font-size(24px); }
+	.home .inner-banner { padding: 0; .height(250px); }
+	.site-footer .cop_footer .cop_menu ul li:nth-of-type(6) { display: inline;} //documents 
+}
 
 /*
 DESKTOP
