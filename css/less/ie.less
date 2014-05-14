@@ -26,7 +26,50 @@ import the mixins file so LESS can understand the variables.
 /* import grid */
 @import "_grid.less";
 
+@import "_600up.less";
+
+.content-area {
+background: transparent;
+-ms-filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#E5EEEEEE,endColorstr=#E5EEEEEE)"; /* IE8 */
+    filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr=#E5EEEEEE,endColorstr=#E5EEEEEE)";   /* IE6 & 7 */
+      zoom: 1;
+}
+
 @import "_768up.less";
+.lt-ie9 body {
+	background-image: none;
+	background-color: #eee;
+}
+.main-navigation .nav-menu li { .font-size(14px); }
+.site-branding .site-title { .font-size(24px); }
+.home .inner-banner { padding: 0; .height(250px); }
+.site-footer .cop_footer .cop_menu ul li:nth-of-type(6) { display: inline;} //documents 
+.site-footer .cop_footer .cop_menu ul li:nth-of-type(7) { display: inline;} //contact us 
+.site-footer .footer_inner .nav-menu { 
+	.column(8); .first; 
+	
+	li.menu-item-31 {
+		margin-right: 0;
+	}
+}
+.site-footer .footer_inner .contact-info { .column(4); .last; 
+	clear: none;
+	text-align: left;
+	border: none;
+	border-left: 1px solid @white;
+	padding: 0;
+	.padding-left(10px);
+	.min-height(125px);	
+		h3 { 
+			display: block;
+			font-weight: bold;
+		}
+		p {
+			display: block;
+			text-align: left;
+		}		
+}	
+	
 @import "_1030up.less";
 
 /* 
@@ -51,7 +94,30 @@ You can also target specific versions by using the classes applied to
 the html element. These can sometimes change, so take a look inside the
 header.php file to see what they are:
 
-
-.lt-ie8 .class { ... }
-
 */
+
+.lt-ie8 {
+	.main-navigation .nav-menu li {
+		display: inline;
+		z-index:10;
+	}
+	.site-footer .footer_inner {
+		.nav-menu {
+			width: 65%;
+			
+			li {
+				width: 22%;
+				
+				.sub-menu {
+					margin: 0;
+				}
+			}
+		}
+		.contact-info {
+			width: 31%;
+		}
+	}
+	.screen-reader-text {
+		display: none;
+	}
+}
