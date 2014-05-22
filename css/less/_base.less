@@ -416,7 +416,11 @@ text-shadow: 1px 1px 0px rgba(238, 238, 238, 0.5);
 }
 h3, .h3 {
 	.font-size(16px);
+		background-color: @sec-color;
+		color: @white;
+		.padding-left(10px);	
 }
+
 h4, .h4 {
 	.font-size(14px);
 }
@@ -834,7 +838,15 @@ POSTS & CONTENT STYLES
 
 /** Entry content 
 -------------------------------------------------------------- */
-.entry-content {} /* end .entry-content */
+.entry-content {
+	/*
+	h3 {
+		background-color: @sec-color;
+		color: @white;
+		.padding-left(10px);
+	}
+	*/
+} /* end .entry-content */
 
 .wp-caption {
 	max-width: 100%;
@@ -1088,6 +1100,21 @@ STANDARD PAGES
 		}
 	}
 }
+
+/** About Us Page
+---------------------------------------------------------------- */
+.page-id-29  {
+	.entry-content {
+		p {
+			clear: both;
+			.padding-top(10px);
+		}
+		img {
+			margin-top: 0;
+		}
+	}
+}
+
 
 /** Search Results
 -------------------------------------------------------------- */

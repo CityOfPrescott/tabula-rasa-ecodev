@@ -4,7 +4,7 @@ ADMIN MENU
 **************************************************************/
 
 function remove_admin_menus () {
-	if (!current_user_can('manage_options')){ // Only proceed if user does not have admin role.
+	if (!current_user_can('administrator')){ // Only proceed if user does not have admin role.
 		//remove_menu_page('index.php'); 				// Dashboard
 		//remove_menu_page('edit.php'); 				// Posts
 		//remove_menu_page('upload.php'); 			// Media
@@ -16,6 +16,8 @@ function remove_admin_menus () {
 		//remove_menu_page('users.php'); 				// Users
 		//remove_menu_page('tools.php'); 				// Tools
 		//remove_menu_page('options-general.php'); 		// Settings
+		remove_menu_page('admin.php?page=wpcf7'); 		// Contact Form 7
+		remove_menu_page('wpcf7'); 		// Contact Form 7
  
 		//remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=post_tag' );	// Remove posts->tags submenu
 		//remove_submenu_page( 'edit.php', 'edit-tags.php?taxonomy=category' );	// Remove posts->categories submenu
@@ -346,5 +348,5 @@ function my_help_menu() {
 function help_options() {
 	include('theme-options-inc/help.php');
 }
-add_action( 'admin_menu', 'my_help_menu' );
+//add_action( 'admin_menu', 'my_help_menu' );
 ?>

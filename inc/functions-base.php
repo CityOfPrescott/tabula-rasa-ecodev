@@ -165,6 +165,7 @@ function tr_theme_support() {
 	
 	// This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style( get_template_directory_uri() . '/css/editor-style.css' );	
+	//add_editor_style( get_stylesheet_uri() );
 
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',

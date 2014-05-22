@@ -209,3 +209,22 @@ function my_class_names($classes) {
 //Now add test class to the filter
 add_filter('body_class','my_class_names');
 ?>
+<?php
+function wpse_128380_tinymce_body_class( $mce ) {
+    // you could do things here to detect whatever you need
+    // and use those for the additional classes.
+    // be safe and use sanitize_html_class or similar if generated.
+
+    // example: use the post ID when editing a post
+    if ( $post = get_post() ) {
+        $mce['body_class'] .= ' page-id-' . sanitize_html_class( $post->ID );
+    }
+
+    $mce['body_class'] .= ' custom-class another-custom-class etc';
+
+    return $mce;
+}
+add_filter( 'tiny_mce_before_init', 'wpse_128380_tinymce_body_class' );
+// if you're using the "teeny" version of the editor,
+// it fires the teeny_mce_before_init filter instead.
+?>
