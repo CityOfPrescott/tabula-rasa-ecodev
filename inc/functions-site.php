@@ -189,7 +189,7 @@ function google_analytics_tracking_code(){ ?>
 
 	</script>
 <?php }	
-add_action('wp_head', 'google_analytics_tracking_code');
+//add_action('wp_head', 'google_analytics_tracking_code');
 
 /* Add random background classes
 ******************************************************/
@@ -227,4 +227,21 @@ function wpse_128380_tinymce_body_class( $mce ) {
 add_filter( 'tiny_mce_before_init', 'wpse_128380_tinymce_body_class' );
 // if you're using the "teeny" version of the editor,
 // it fires the teeny_mce_before_init filter instead.
+?>
+<?php //remove contact from css and js when not needed
+function deregister_cf7_javascript() {
+  wp_dequeue_script( 'contact-form-7' );
+	if ( is_page( 'contact-jeff-burt' ) || is_page ( 'contact-don-prince' ) || is_page( 'contact-becky-karcie') || is_page( 'contact-wendy-bridges' ) ) {
+		wp_enqueue_script( 'contact-form-7' );
+  }
+}
+add_action( 'wp_print_scripts', 'deregister_cf7_javascript', 100 );
+
+function deregister_cf7_styles() {
+  wp_dequeue_style( 'contact-form-7');
+	if ( is_page( 'contact-jeff-burt' ) || is_page ( 'contact-don-prince' ) || is_page( 'contact-becky-karcie') || is_page( 'contact-wendy-bridges' ) ) {
+		wp_enqueue_style('contact-form-7');
+	}
+}
+add_action( 'wp_print_styles', 'deregister_cf7_styles', 100 );
 ?>
