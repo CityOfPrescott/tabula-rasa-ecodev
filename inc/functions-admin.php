@@ -337,6 +337,26 @@ function add_plugin( $plugin_array ) {
    return $plugin_array;
 }
 
+/* Mod link module in the editor to display atachments (Pdf's')
+****************************************************************/
+// Query for all post statuses so attachments are returned
+function my_modify_link_query_args( $query ) {
+	$query['post_status'] = array( 'publish', 'inherit');
+	return $query;
+}
+add_filter( 'wp_link_query_args', 'my_modify_link_query_args' );
+
+// Link to media file URL instead of attachment page
+function my_modify_link_query_results( $results, $query ) {
+	foreach ( $results as &$result ) {
+		if ( 'Media' === $result['info'] ) {
+			$result['permalink'] = wp_get_attachment_url( $result['ID'] );
+		}
+	}
+	return $results;
+}
+add_filter( 'wp_link_query', 'my_modify_link_query_results' );
+
 /*************************************************************
 HELP PAGE 
 **************************************************************/
