@@ -111,6 +111,32 @@ you can add resource intensive styles.
 @media only screen and (min-width: 850px) {
 	.site-branding .site-title { .font-size(21px); }
 	.main-navigation .nav-menu li { .font-size(12px); }
+	.site-footer .footer_inner .contact-info .other-links {
+		display: block;
+		color: @white;
+		.padding-top(25px);
+		
+		
+		.other-links-title {
+			font-weight: bold;
+			margin: 0;
+			
+		}
+		p {
+			text-align: center;
+		
+		}
+		a {
+			color: @white;
+			text-decoration: underline;
+			.font-size(14px);
+			font-weight: normal;
+			
+			&:hover {
+				color: #eee;
+			}
+		}
+	}
 	
 	.site-footer .footer_inner .nav-menu { .column(8); .first; }
 	.site-footer .footer_inner .contact-info { .column(4); .last; 

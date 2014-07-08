@@ -17,6 +17,12 @@
 				<div class="contact-info">
 					<h3>Department of Economic Initiatives</h3>
 					<p>928-777-1204</p>
+					<div class="other-links">
+						<p class="other-links-title">Prescott Links</p>
+						<p>
+							<a href="http://www.prcairport.com/">Prescott Municipal Airport</a> * <a href="http://www.visit-prescott.com/">Tourism</a>
+						</p>
+					</div>					
 				</div>
 		</div><!-- .footer_inner -->
 
