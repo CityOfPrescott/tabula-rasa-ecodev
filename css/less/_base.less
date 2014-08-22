@@ -1523,29 +1523,31 @@ FOOTER STYLES
 			}	
 		}
 	}
-	.cop_footer {
-		clear: both;
-		background: #ddd;
-		overflow: hidden;
-		
-		.footer_inner {
-		}
-		
-		.logo {
-			margin: 0;
-			padding: 0;
-			text-align: center;
-			
-			a {
-				text-align: center;
-			}
-		}
-		.cop_menu {
-			display: none;
-		}
-		
-	}		
+	.other-links {
+		display: none;
+	}
 }
+.cop_footer {
+	clear: both;
+	background: #ddd;
+	overflow: hidden;
+	
+	.footer_inner {
+	}
+	
+	.logo {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		
+		a {
+			text-align: center;
+		}
+	}
+	.cop_menu {
+		display: none;
+	}
+}	
 .copyright {}
 
 /******************************************************************
@@ -1576,5 +1578,10 @@ AUTHOR BIOS
 }
 
 /******************************************************************
-MULTI-SITE
+Zoom Prospectory Widget
 ******************************************************************/
+#zpewidgetcontainer {
+	iframe {
+		.height(410px);
+	}
+}

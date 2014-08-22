@@ -129,6 +129,7 @@ Posts 2 Posts
 ------------------------------------------------------------------*/
 
 require_once('inc/theme-options.php');
+require_once('inc/metabox/example-functions.php');
 /** Creates "Theme Options" page under Appearance Tab
 
 /*********************************************************

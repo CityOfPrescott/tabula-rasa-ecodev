@@ -19,13 +19,18 @@
 					<p>928-777-1204</p>
 					<div class="other-links">
 						<p class="other-links-title">Prescott Links</p>
-						<p>
-							<a href="http://www.prcairport.com/">Prescott Municipal Airport</a> * <a href="http://www.visit-prescott.com/">Tourism</a>
-						</p>
+						<ul>
+							<li><a href="http://www.prcairport.com/">Prescott Municipal Airport</a></li>
+							<li><a href="http://www.visit-prescott.com/">Tourism</a></li>
+							<li><a href="http://www.prescottlibrary.info/">Prescott Library</a></li>
+							<li><a href="http://www.prescottlibrary.info/">Antelope Hills Golf Course</a></li>
+							<li><a href="http://www.prescottlibrary.info/">Prescott Recreation Services</a></li>
+							<li><a href="http://www.prescottlibrary.info/">City of Prescott</a></li>
+						</ul>
 					</div>					
 				</div>
 		</div><!-- .footer_inner -->
-
+		<!--
 		<div class="cop_footer">
 			<div class="footer_inner">
 				<p class="logo"><a href="http://www.cityofprescott.net/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo_40.png" alt="Prescott Municipal Airport" /></a></p>
@@ -40,8 +45,10 @@
 						<li><a href="http://www.cityofprescott.net/contact/">Contact Us</a></li>
 					</ul>
 				</div><!-- .site-info -->
+				<!--
 			</div>	
 		</div>
+		-->
 		
 	</footer><!-- #colophon -->
 </div><!-- #page -->

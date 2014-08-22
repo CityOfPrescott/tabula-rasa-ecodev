@@ -44,10 +44,29 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
+	<div class="cop_footer">
+		<div class="footer_inner">
+			<p class="logo"><a href="http://www.cityofprescott.net/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Prescott Municipal Airport" /></a></p>
+			<div class="cop_menu">
+				<ul>
+					<li><a href="http://www.cityofprescott.net/visitors/">Visitors</a></li>
+					<li><a href="http://www.cityofprescott.net/services/">City Services</a></li>
+					<li><a href="http://www.cityofprescott.net/history/">History</a></li>
+					<li><a href="http://www.cityofprescott.net/business/">Business</a></li>
+					<li><a href="http://www.cityofprescott.net/leadership/">City Leadership</a></li>
+					<li><a href="http://www.cityofprescott.net/documents/">Documents</a></li>
+					<li><a href="http://www.cityofprescott.net/contact/">Contact Us</a></li>
+				</ul>
+			</div><!-- .site-info -->
+		</div>	
+	</div>	
 	<header id="masthead" class="site-header" role="banner">
 		<div class="inner-header">
 			<div class="site-branding">
-				<a href="#my-menu" class="mobile-menu"><img src="<?php echo bloginfo('template_url'); ?>/images/navicon_25.png" /></a>			
+				<a href="#my-menu" class="mobile-menu"><img src="<?php echo bloginfo('template_url'); ?>/images/navicon_25.png" /></a>	
+				<!--
+				<p class="logo"><a href="http://www.cityofprescott.net/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Prescott Municipal Airport" /></a></p>
+				-->
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</div>

@@ -34,8 +34,14 @@ header#masthead .site-header
 	.site-description {
 	}
 	.header-image {}
-}
-.logo {
+	.logo {
+		margin: 0;
+		text-align: center;
+		
+		img {
+			.width(150px);
+		}
+	}
 }
 .banner {
 	
@@ -63,6 +69,7 @@ header#masthead .site-header
 .menu-toggle {}
 .main-navigation {
 	float: right;
+	
 .nav-menu {
 	text-align: right;
 
@@ -127,27 +134,42 @@ FOOTER STYLES
 		}
 		.entry-meta {}
 	}
-	.cop_footer {
-		.footer_inner {	
-		}
-		.logo {}
-		.cop_menu {
-			ul {
-				li { 					
-					&:nth-of-type(1) { //visitors
-						display: inline;
-					}		
-					&:nth-of-type(3) { //history
-						display: inline;
-					}
-					&:nth-of-type(6) { //documents
-					}		
-					&:nth-of-type(7) { //contact us
-					}							
-					a {	}
+}
+.cop_footer {
+	.footer_inner {	
+	}
+	.logo {}
+	.cop_menu {
+		ul {
+			li { 					
+				&:nth-of-type(1) { //visitors
+					display: inline;
+				}		
+				&:nth-of-type(3) { //history
+					display: inline;
 				}
+				&:nth-of-type(6) { //documents
+				}		
+				&:nth-of-type(7) { //contact us
+				}							
+				a {	}
 			}
 		}
-	}	
-}
+	}
+}	
 .copyright {}
+
+/** Home Page
+-------------------------------------------------------------- */
+.home {
+	.entry-content {
+		.column(6);
+		.first;
+	
+	}
+	.content-section-two {
+		.column(6);
+		.last;
+		
+	}
+}
