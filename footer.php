@@ -30,7 +30,6 @@
 					</div>					
 				</div>
 		</div><!-- .footer_inner -->
-		<!--
 		<div class="cop_footer">
 			<div class="footer_inner">
 				<p class="logo"><a href="http://www.cityofprescott.net/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo_40.png" alt="Prescott Municipal Airport" /></a></p>
@@ -45,10 +44,9 @@
 						<li><a href="http://www.cityofprescott.net/contact/">Contact Us</a></li>
 					</ul>
 				</div><!-- .site-info -->
-				<!--
+
 			</div>	
 		</div>
-		-->
 		
 	</footer><!-- #colophon -->
 </div><!-- #page -->

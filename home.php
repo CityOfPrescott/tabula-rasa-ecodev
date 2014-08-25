@@ -28,10 +28,6 @@ get_header(); ?>
 					<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'tabula-rasa' ) ); ?>
 					<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'tabula-rasa' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 				</div><!-- .entry-content -->
-				<div class="content-section-two">
-					<?php echo get_post_meta( $post->ID, '_cmb_test_wysiwyg', true ); ?>
-				</div>
-
 			</article><!-- #post -->				
 				
 				
