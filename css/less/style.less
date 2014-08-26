@@ -183,7 +183,37 @@ you can add resource intensive styles.
 	.main-navigation .nav-menu li { .font-size(14px); }
 }
 @media only screen and (min-width: 1000px) {
-	.site-branding .site-title { .font-size(24px); }
+	.site-header .inner-header {
+		.padding-top(10px);
+		.height(90px);
+		
+	}
+	.site-branding {
+		.column(2.75);
+		.first;
+		width: 21%;
+	}
+	.main-navigation {
+		.column(7.5);
+		text-align: left;
+		width: 59%;
+		
+		.nav-menu {
+			text-align: left;
+			.margin-top(15px);
+			padding-right: 0;
+		}
+	}
+	.logo {
+		.column(1.75);
+		.last;
+		width: 15%;
+		.margin-top(7px);
+	}
+	.site-branding .site-title { 
+		.font-size(24px); 
+		text-align: center;
+	}
 	.home .inner-banner { padding: 0; .height(250px); }
 	.site-footer .cop_footer .cop_menu ul li:nth-of-type(6) { display: inline;} //documents 
 }

@@ -48,16 +48,12 @@
 		<div class="inner-header">
 			<div class="site-branding">
 				<a href="#my-menu" class="mobile-menu"><img src="<?php echo bloginfo('template_url'); ?>/images/navicon_25.png" /></a>
-				<!--
-				<p class="logo"><a href="http://www.cityofprescott.net/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Prescott Municipal Airport" /></a></p>
-				-->
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</div>
-
 			<nav id="my-menu" class="main-navigation" role="navigation">
 				<?php tr_main_nav(); ?>
 			</nav><!-- #site-navigation -->
+			<p class="logo"><a href="http://www.cityofprescott.net/"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Prescott Municipal Airport" /></a></p>
 		</div>
 		<div class="banner">
 			<div class="inner-banner">
