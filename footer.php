@@ -26,6 +26,7 @@
 							<li><a href="http://www.prescottlibrary.info/">Antelope Hills Golf Course</a></li>
 							<li><a href="http://www.prescottlibrary.info/">Prescott Recreation Services</a></li>
 							<li><a href="http://www.prescottlibrary.info/">City of Prescott</a></li>
+							<li><a href="http://www.gprepaz.com/">Greater Prescott Regional Economic Partnership</a></li>
 						</ul>
 					</div>					
 				</div>
@@ -47,7 +48,9 @@
 
 			</div>	
 		</div>
-		
+		<div class="tl-footer">
+			<a href="http://www.third-law.com/">Prescott Web Design by Third Law</a>
+		</div>		
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

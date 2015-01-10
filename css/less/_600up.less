@@ -305,9 +305,9 @@ header#masthead .site-header
 	border-top: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
 	position: relative;
+
 	
 	.inner-banner {
-		.wrap;
 		background-color: transparent;
 		
 		h2 {
@@ -316,8 +316,16 @@ header#masthead .site-header
 			.font-size(26px);
 			.padding(5px, 10px);
 			text-align: left;
+			.wrap;			
 		}
 	}
+}
+.home .banner {
+	.wrap;
+	
+		.inner-banner h2 {
+			
+		}
 }
 
 /** Navigation
@@ -808,7 +816,8 @@ FOOTER STYLES
 	.footer_inner {	
 		.wrap;
 		.margin-top(10px);
-		.margin-bottom(10px);
+		//.margin-bottom(10px);
+		.padding-bottom(10px);
 		overflow: hidden;
 			
 		.nav-menu {
